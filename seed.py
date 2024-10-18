@@ -3,8 +3,8 @@ from models import User, Note, EditorContent, ContactMessage
 from models import db
 
 def seed_db():
-    user1 = User(username='user1', password='password123')
-    user2 = User(username='user2', password='password456')
+    user1 = User(email='user1', password='password123')
+    user2 = User(email='user2', password='password456')
 
     db.session.add(user1)
     db.session.add(user2)
