@@ -8,13 +8,14 @@ dill==0.3.8
 exceptiongroup==1.2.2
 executing==2.0.1
 Faker==14.2.0
-Flask==2.2.2
+Flask>=2.2.5,<3.0.0
 Flask-Bcrypt==1.0.1
 Flask-Cors==5.0.0
 Flask-Mail==0.10.0
 Flask-Migrate==4.0.7
 Flask-RESTful==0.3.10
-Flask-SQLAlchemy==3.1.1
+Flask-SQLAlchemy>=3.1.1
+
 greenlet==3.1.1
 importlib_metadata==8.5.0
 importlib_resources==6.4.5
@@ -58,4 +59,4 @@ urllib3==2.2.3
 wcwidth==0.2.9
 Werkzeug==2.2.2
 WTForms==3.1.2
-zipp==3.17.0
+zipp==3.20.0
