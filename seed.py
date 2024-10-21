@@ -3,15 +3,15 @@ from models import User, Note, EditorContent, ContactMessage
 from models import db
 
 def seed_db():
-    user1 = User(username='user1', password='password123')
-    user2 = User(username='user2', password='password456')
+    user1 = User(email='user1', password='password123')
+    user2 = User(email='user2', password='password456')
 
     db.session.add(user1)
     db.session.add(user2)
     db.session.commit()
 
-    note1 = Note(title='First Note', user_id=user1.id)
-    note2 = Note(title='Second Note', user_id=user2.id)
+    note1 = Note(title='First Note', content='hey this is my first content', tags='tag1,tag2', user_id=user1.id)
+    note2 = Note(title='Second Note', content='hey this is my first content', tags='tag1,tag2', user_id=user2.id)
 
     db.session.add(note1)
     db.session.add(note2)

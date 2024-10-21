@@ -68,7 +68,10 @@ The **Note Taking App Backend** is a RESTful API built with Flask, designed to m
 ## Usage
 
 After starting the server, you can interact with the API using tools like **Postman** or **Curl**. Make sure to include the JWT token in the headers for any requests that require authentication.
+<<<<<<< HEAD
+=======
 
+>>>>>>> manuh
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
@@ -88,3 +91,11 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 5. ### Open a Pull Request:
     Go to the original repository and click on the "Pull Requests" tab. Then click "New Pull Request" and select your branch to submit your changes for review.
+<<<<<<< HEAD
+
+
+5. ### Open a Pull Request:
+Go to the original repository and click on the "Pull Requests" tab. Then click "New Pull Request" and select your branch to submit your changes for review.
+
+=======
+>>>>>>> manuh

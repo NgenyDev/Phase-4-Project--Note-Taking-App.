@@ -4,7 +4,7 @@ from models import User, Note, ContactMessage
 # User Schema
 class UserSchema(Schema):
     id = fields.Int(dump_only=True)
-    username = fields.Str(required=True, validate=validate.Length(min=3, max=50))
+    email = fields.Str(required=True, validate=validate.Length(min=7, max=50))
     password = fields.Str(load_only=True, required=True, validate=validate.Length(min=6))
 
     @post_load
@@ -15,9 +15,9 @@ class UserSchema(Schema):
 class NoteSchema(Schema):
     id = fields.Int(dump_only=True)
     title = fields.Str(required=True, validate=validate.Length(min=1, max=100))
-    content = fields.Str(required=True, validate=validate.Length(min=1))
-    user_id = fields.Int(dump_only=True)
+    content = fields.Str(required=True, validate=validate.Length(min=1))   
     tags = fields.List(fields.Str(), missing=[])
+    user_id = fields.Int(dump_only=True)
 
     @post_load
     def create_note(self, data, **kwargs):
