@@ -36,4 +36,4 @@ if __name__ == '__main__':
     app.run()
 else:
     #run using gunucorn gunicorn -b 0.0.0.0:5000 app:gunicorn_app
-    gunicrporn_app = create_app()
+    gunicorn_app = create_app()
