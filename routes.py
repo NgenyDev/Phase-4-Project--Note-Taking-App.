@@ -1,14 +1,11 @@
 from flask import Flask, Blueprint, request, session, jsonify
 from flask_restful import Api, Resource
-from flask_cors import CORS
 from flask_mail import Mail, Message
 from models import db, User, Note, ContactMessage
 from schemas import UserSchema, NoteSchema, ContactMessageSchema
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-CORS(app)
-#CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587

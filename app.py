@@ -10,7 +10,7 @@ from flask_mail import Mail
 def create_app():
     app = Flask(__name__)
     app.config.from_object('config.Config')
-    CORS(app, supports_credentials=True)
+    CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "*"}})
     db.init_app(app)
     bcrypt = Bcrypt(app)
     migrate = Migrate(app, db)
