@@ -23,17 +23,17 @@ def create_app():
     @app.route('/')
     def home():
         return "Welcome to the Note Taking App! The app is currently running."
-
-    return app
-
-def setup_database(app):
+    
+    #setup database
     with app.app_context():
         db.create_all()
 
-def run_app(app):
-    app.run() 
+    return app
 
 if __name__ == '__main__':
+    # Run locally using flask run
     app = create_app()
-    setup_database(app)
-    run_app(app)
+    app.run()
+else:
+    #run using gunucorn gunicorn -b 0.0.0.0:5000 app:gunicorn_app
+    gunicrporn_app = create_app()
