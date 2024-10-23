@@ -588,7 +588,7 @@ class Signup(Resource):
         return user_schema.dump(users, many=True), 200
 
 class Login(Resource):
-    @cross_origin()
+    @cross_origin(supports_credentials=True)
     def post(self):
         data = request.get_json()
         
